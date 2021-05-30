@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load webp_converter %}
+{% load static %}
+
+<!-- top bar header -->
+<div class="row d-none d-sm-block topbar line-menu-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 float-left p-0">
+                <a href="{% url "scheduler:schedule" %}">
+                    <span class="black-text" >JETZT TERMIN VEREINBAREN! </span>
+                </a>
+            </div>
+
+            <div class="col-4 float-center text-center p-0">
+                <span style="font-size: 11px;letter-spacing: 1px;">
+                    <a data-toggle="modal" onclick="window.location.href='/newsletter-abonnieren'"
+                       style="color: #c9a877;" href="">NEWSLETTER ABONNIEREN
+                    </a>
+                </span>
+            </div>
+
+            <div class="col-4 float-right text-right" >
+                <a Href="tel:0800 168 03398">
+                    <img src="{% static_webp "denkmalgeschutztelofts/images/icons/phone-icon-black.png" %}"
+                         width="21" height="21">
+                    <span>0800 168 03398 </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end top bar -->
+
+<!-- line-menu-sticky -->
+<div class="line-menu-sticky2 lower-nav" style="background-color: #D0E5EA;">
+
+    <!-- menu -->
+    <div class="container p-0">
+        <nav class="navbar navbar-expand-lg p-0">
+
+            <!-- logo -->
+            <!-- <a class="navbar-brand pt-3 pb-3" href="{% url "denkmalgeschutztelofts:index" %}">
+                <h2 class="logo">denkmalgeschützte<span style="color: #c9a877;">lofts</span>.de
+                </h2>
+
+            </a> -->
+            <img onclick="location.href = '/';"  class="navbar-logo"src="{% static_webp "denkmalgeschutztelofts/images/logo-kapital2.png" %}" >
+
+            <!--end -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars" id="changeopen" style="color: #5C4F45"></i><i
+                            class="fas fa-chevron-up d-none" id="changeclose"
+                            style="color: #5C4F45;"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <a href="/">STARTSEITE</a>
+                    </li>
+                    <li>
+                        <a>PROJEKTE &#9662;</a>
+                        <ul class="dropdown">
+                            <li> <a href="/kaiser-dicke">KAISER & DICKE</a></li>
+                            <li><a href="/Rübenstraße" >RÜBENSTRAßE 37</a></li>
+                            <li><a href="/Käthe-Kollwitz-Str" style="text-transform:uppercase;">Käthe-Kollwitz-Str</a></li>
+
+{#                            <li><a href="/teschemacher-hof" >TESCHEMACHER HOF</a></li>#}
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/denkmal-afa">DENKMAL-AFA</a>
+                    </li>
+                    <li>
+                        <a href="/blog">BLOG</a>
+                    </li>
+                    <li >
+                        <a href="/Covid-19">COVID-19</a>
+                    </li>
+                    <li>
+                        <a href="{% url "denkmalgeschutztelofts:kontakt" %}" style="color: #c9a877">KONTAKT</a>
+                    </li>
+                    <!-- <li><a href="/landing-page/open-house" style="color: #c9a877">VIRTUAL TOUR</a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end menu -->
+</div>
+<!-- end bg-black -->
+
+<!-- <div class="modal fade" id="download-catalogue-landing" tabindex="-1" role="dialog"
+     aria-labelledby="download-catalogue" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 style="margin-bottom: 15px; font-size: 13px; letter-spacing: 0.5pt; font-weight: 600;color: #c9a877;">
+                    Jetzt denkmalgeschütztelofts.de
+-Newsletter abonnieren - immer gut informiert sein!</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="close-download-catalogue" class="p-0 m-0">
+                    <span class="material-icons">
+                    close
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <form method="POST" data-parsley-validate action="/process-forms/catalogue"
+                      class="form_landing_catalogue form-catalogue-download-furniture col-12"
+                      style="float: none; margin-bottom: 0px;padding: 0;">
+                    <div class="row" style="margin: 0 !important;">
+                        <input type="hidden" name="_token"
+                               value="1OAi1TiFVViAWuhEuWshU4dIUNhPOpNa0ZH5nJcn"> <input
+                            type="text" name="inputInterested" class="escondida">
+                        <input type="hidden" name="origin" class="origin"/>
+                        <input type="hidden" name="referrer" class="referrer"/>
+                        <input type="hidden" name="lead_path" class="lead_path"/>
+
+                        <div class="form-section-furniture w-100 mb-3 mt-2">
+                            <input data-parsley-trigger="change" required="" type="text"
+                                   name="first_name"
+                                   placeholder="NENNEN SIE UNS IHREN NAMEN*"
+                                   onfocus="if(this.value=='NAME*'){this.value = ''}"
+                                   onblur="if(this.value == ''){this.value = 'NENNEN SIE UNS IHREN NAMEN*'}"
+                                   class="name w-100">
+                            <input data-parsley-trigger="change" type="email" name="email"
+                                   class="email w-100"
+                                   value="EMAIL*"
+                                   placeholder="EMAIL*"
+                                   onfocus="if(this.value=='EMAIL*'){this.value = ''}"
+                                   onblur="if(this.value == ''){this.value = 'GEBEN SIE IHRE E-MAIL EIN*'}"
+                                   required>
+                            <input type="text" data-parsley-trigger="change" required=""
+                                   name="phone"
+                                   class="phone w-100" value="TELEFONNUMMER EINGEBEN"
+                                   placeholder="TELEFONNUMMER EINGEBEN"
+                                   onfocus="if(this.value=='PHONE'){this.value = ''}"
+                                   onblur="if(this.value == ''){this.value = 'TELEFONNUMMER EINGEBEN'}"
+                                   style="margin-bottom: 10px;">
+                            <input type="hidden" value="Download Catalogue " name="request">
+                             <button type="submit" id="download-catalogue-tag" name="submit">DOWNLOAD</button> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer p-0"
+                 style="border: none;background-color: #c9a877 !important;border-radius: 0px !important;text-align: center;float: left;">
+                <button type="submit" class="btn"
+                        style="background-color: #c9a877 !important;color: white !important;text-align: center;float: left;margin-right: 425px;">
+                    SENDEN
+                </button>
+                <span class="clearfix"></span>
+            </div>
+        </div>
+    </div>
+</div> -->

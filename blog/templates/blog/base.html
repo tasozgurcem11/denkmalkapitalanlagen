@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "blog/fonts/icomoon/style.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/jquery-ui.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "blog/fonts/flaticon/font/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "blog/css/style.css" %}">
+</head>
+<body>
+<div class="site-wrap">
+    {% include "denkmalgeschutztelofts/header.html" %}
+    {% block body %}
+    {% endblock %}
+    {% include "denkmalgeschutztelofts/footer.html" %}
+</div>
+
+<script src="{% static "blog/js/jquery-3.3.1.min.js" %}"></script>
+<script src="{% static "blog/js/jquery-migrate-3.0.1.min.js" %}"></script>
+<script src="{% static "blog/js/jquery-ui.js" %}"></script>
+<script src="{% static "blog/js/popper.min.js" %}"></script>
+<script src="{% static "blog/js/bootstrap.min.js" %}"></script>
+<script src="{% static "blog/js/owl.carousel.min.js" %}"></script>
+<script src="{% static "blog/js/jquery.stellar.min.js" %}"></script>
+<script src="{% static "blog/js/jquery.countdown.min.js" %}"></script>
+<script src="{% static "blog/js/jquery.magnific-popup.min.js" %}"></script>
+<script src="{% static "blog/js/bootstrap-datepicker.min.js" %}"></script>
+<script src="{% static "blog/js/aos.js" %}"></script>
+
+<script src="{% static "blog/js/main.js" %}"></script>
+</body>
+</html>

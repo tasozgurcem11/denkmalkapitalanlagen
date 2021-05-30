@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+
+<div class="cd-schedule-modal__event-info">
+    <div style="background: #fff" class="schedule-form">
+        {#        <div class="mt-5 d-lg-none"></div>#}
+        <form method="POST" class="contact100-form3 validate-form" id="reserve-slot">
+            {% csrf_token %}
+            <div class="rs3-wrap-input100"  style="width: 100%">
+                <select class="anrede-outline" name="Anrede">
+                            <option value="0">Telefontermin</option>
+                            <option value="0">Online Besichtigungstermin</option>
+                            <option value="0">Online Beratung</option>
+                </select>
+                <span class="focus-input100">
+                </span>
+            </div>
+            <label class="label-input100" for="first-name">Nennen Sie uns Ihren Namen *</label>
+            <div class="wrap-input100 rs1-wrap-input1000 validate-input" style="width: 50%"
+                 data-validate="Vorname eingeben">
+                <input id="id_first_name" class="input100" type="text" name="first_name"
+                       placeholder="Vorname"
+                       {% if form.is_bound %}value="{{ form.first_name.value }}"{% endif %}>
+                <span class="focus-input100"></span>
+                {% for err in form.first_name.errors %}
+                    <small class="text-danger">{{ err }}</small><br>
+                {% endfor %}
+            </div>
+
+            <div class="wrap-input100 rs2-wrap-input1000 validate-input"  style="width: 50%"
+                 data-validate="Nachname eingeben">
+                <input id="id_last_name" class="input100" type="text" name="last_name"
+                       placeholder="Nachname"
+                       {% if form.is_bound %}value="{{ form.last_name.value }}"{% endif %}>
+                <span class="focus-input100"></span>
+                {% for err in form.last_name.errors %}
+                    <small class="text-danger">{{ err }}</small><br>
+                {% endfor %}
+            </div>
+
+            <label class="label-input100" for="phone">Telefonnummer eingeben *</label>
+            <div class="wrap-input100 validate-input"
+                 data-validate="Gültige Telefonnummer ist erforderlich">
+                <input id="id_phone_number" class="input100" type="text" name="phone_number"
+                       placeholder="01512 3456789"
+                       {% if form.is_bound %}value="{{ form.phone_number.value }}"{% endif %}>
+                <span class="focus-input100"></span>
+                {% for err in form.phone_number.errors %}
+                    <small class="text-danger">{{ err }}</small><br>
+                {% endfor %}
+            </div>
+
+            <label class="label-input100" for="email">Geben Sie Ihre E-Mail ein *</label>
+            <div class="wrap-input100">
+                <input id="id_email" class="input100" type="text" name="email"
+                       placeholder="maxmustermann@mail.de"
+                       {% if form.is_bound %}value="{{ form.email.value }}"{% endif %}>
+                <span class="focus-input100"></span>
+                {% for err in form.email.errors %}
+                    <small class="text-danger">{{ err }}</small><br>
+                {% endfor %}
+            </div>
+
+            <div class="row">
+                <ul style="padding: 0 2% 0 3%;">
+                    <li>
+                        <input style="float: left;" id="c1" type="checkbox" required>
+                        <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                        font-size: 14px; padding-left: 20px; font-weight: 500;">
+                            Hiermit willige ich in die dafür erforderliche Erhebung, Speicherung,
+                            Verarbeitung und Nutzung meiner personenbezogenen Daten ein. Die Daten
+                            werden nicht an unbeteiligte Dritte weitergegeben und ich habe ein Recht
+                            auf Einsicht. Diese Erklärung kann ich jederzeit per E-Mail an <span
+                                style="color: #c9a877;">info@denkmalkapitalanlagen.de</span>
+                            widerrufen.
+                            Ich akzeptiere die <span style="cursor: pointer;color: #c9a877;"
+                                                     onclick="window.location.href = '/datenschutz';">Datenschutzerklärung</span>.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-contact100-form-btn">
+                <button type="submit" class="contact100-form-btn">
+                    Nachricht Senden
+                </button>
+            </div>
+        </form>
+        <div class="container-contact100-form-btn d-lg-none">
+            <a href="{% url "scheduler:week" start_date %}"
+               class="contact100-form-btn-sm">Zurück zu Terminplan</a>
+        </div>
+    </div>
+</div>

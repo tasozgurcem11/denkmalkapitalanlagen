@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kapitalanlagen",
+  "private_key_id": "5e6a6db87e9e6849908db5e18a527a9064968d00",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQChJUGYuWRsNFtS\n2R7Q0OZIPjH0PWVMxJNSr29ubU6w0uA5Z9PpvbT0ZfF0GThPvMHS4uoOtpapSWoh\nihw7GpNYHjVY7VOibQGT5oYzyeRvmy2LY4nHUiZkesWJ7VhJXeKNmU6I4hvryedX\nPI8GW4sX3CeX84p5taFJf85LPnn32lCvu6dC//9q4HeSbtprRia0jROa50V3Pexl\n3qHvszVNh1n5XoaN5o9PkATlm1RqRJk127ZguP4QY0V7Gq4XxkJbER9vyEX7AD1z\noMwIHPGVLZim3wOMcK+5xRh3ujENZqPgLXhhVeC9sfEUj2FtWU6/b8hXF7zP3fmO\nHawwe4HRAgMBAAECggEABJm6sLCCRHCONuRJ8+4y1Ncpt+5UyQdHqXGmvcFTIMs0\naY8kRqUK2HtclFLv/57E7c9anUbrMDQPWpvFyI4urLJYFYzY+WchR2aqaCoYYnNM\nrpEN6unWfMHgh9qFzbpncGFzE4dZArdF6oCpGKZeZzT60GS8jFL6Is4KRq2m78N5\nMj2SHz/CHJmXaqO+AUKUmr/Jw+omIIfzENRHzD5dPRSrsmqshk5JGhbRkTYo4Qx5\n+RqgLoeNL3L69OxGLBFy+I4pm37AEmKRMMZk5coeC2xl5rAkmATlhLO0QU1uRWMs\nDfdIFvnxKkXR206y6HyR6hM6jc4lguNV/qFTRSRi3QKBgQDXYPTHF3RaAVfcVp+W\nRzuXDI7LQ8ARBDFdfAzwAH2zmgtYuK8XVjH8vBT0BGex3gwybstTEVbnUd/29XbN\nMNZutLrzZq1pr5S6sV2EK3DMiRPrhSXEjpzR5Ix61WAQa0Oc7DbRVdkir7g4kY19\n5MCnYiffDk1sQCwbMYKD1LU6BwKBgQC/icfIqSrcgPip+qi6558I+Z/NgxX1jbgx\nN+YiDzQ1kL5CO5JvfnhQTSnWuY9Lopxq8JOzd+uAGXqhlpMsPvee1ajt07GzgI67\noZ5QdPT1W6wI7f9mGfJOFaKpQ3A29fM29bI7dwcNqFD/Xqw061GWLEckHVIjioQv\nXe45Zc9PZwKBgQCAei/KC622exKkN3AfPwLHChCsJBAQloW0FGnLSR+y4XNfS1v2\n+c37y15cabxJmAGCnCDhvnguqOKG+MoTgMyJYXob8+YCI2D/NQpp61fwStz9I4Hy\nDHhzpHhAVcRmRvYgR7Azk5hhXpzv8bOLo8dgkebi4i9BIc6tsgz/AwXQRQKBgDhC\nji5AklhmgaPb/oe31Rzbxbal1GNmFz5NvwkuEhXRyDDIMsEREuHzaGCr7I043F0F\nAT1r8f6UfVLNWblbXXyIIbCJx96D2mj+lfPoBrOzE5sj3SruYB/Tdw3kwydBowj3\nrjyNP8MhN3lrI4X/wN0tcFAJVMEfxKftHTY602PtAoGBAIVxlUpqpzmkCNVzAyFI\n+hgzbcnDiU/sRhHNb/bT/N08dk5UbGqBQvvYPdg6bwuRH+3DFiNfGWplCaczwc+O\nf1xqXfTz+U8BsF1mYTt5s7Gzyf7H2j/qEkYL4TJu99H9LPIEgEdXeMRjzHxsgtgh\n8bVcnsa3aOvSMYFVBgGKBcKs\n-----END PRIVATE KEY-----\n",
+  "client_email": "kapitalanlagen@appspot.gserviceaccount.com",
+  "client_id": "100874278656214797406",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kapitalanlagen%40appspot.gserviceaccount.com"
+}

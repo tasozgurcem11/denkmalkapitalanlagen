@@ -1,0 +1,132 @@
+.apartments nav > .nav.nav-tabs{
+
+  border: none;
+    color:#fff;
+    border-radius:0;
+
+}
+.apartments nav > div a.nav-item.nav-link,
+.apartments nav > div a.nav-item.nav-link.active
+{
+ border: none;
+padding: 9px 9px;
+color:#5C4F45;
+border-radius: 3px;
+margin: 0 0px;
+/*text-transform: uppercase;*/
+}
+.apartments .tab-content{
+    line-height: 25px;
+    padding:30px 25px;
+}
+
+.apartments nav > div a.nav-item.nav-link:hover,
+.apartments nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    color:#5C4F45;
+    /*border-radius: 3px;*/
+    transition:background 0.20s linear;
+}
+@media(min-width: 1024px){
+    .apartments nav > div a.nav-item.nav-link.active{
+	/*background: #d29751;*/
+}
+}
+@media(max-width: 1024px){
+    .apartments nav > div a.nav-item.nav-link.active{
+     color: #5C4F45;background-color: #D0E5EA;
+	/*background: #d29751;*/
+}
+    .apartments-nav{
+        /*display: block !important;*/
+        flex-wrap: nowrap;
+    }
+}
+
+ .apartments .tab-content ul {
+    padding: 0;
+}
+ .apartments .tab-content ul li {
+    font-size: 14px;
+    list-style: none;
+    border-bottom: 1px solid #dfe6ef;
+    padding: 10px 0;
+}
+ .apartments .tab-content ul li span.after {
+    float: right;
+    color: #000;
+}
+ @media(min-width: 1024px){
+         .apartments-img img{
+        width:100%;
+        height: 500px;
+        object-fit: contain;
+    }
+     .apartments-img1 img{
+	width:100%;
+    height: 400px;
+    object-fit: contain;
+}
+}
+
+ @media(max-width: 1024px){
+         .apartments-img img{
+        width:100%;
+        height: 300px;
+        object-fit: cover;
+    }
+     .apartments-img1 img{
+	width:100%;
+    height: 350px;
+    object-fit: cover;
+}
+}
+
+
+
+.availability-section .availability-table table thead th {
+    border-top: none;
+    border-bottom: none;
+    font-weight: 500;
+    color:
+    #fff;
+    text-transform: uppercase;
+}
+.availability-section .availability-table table thead {
+    background-color:#d29751;
+}
+.availability-section .availability-table table tbody .name, .availability-section .availability-table table tbody .price {
+    font-weight: 500;
+    color:
+    #062a4d;
+    text-transform: uppercase;
+}
+table, th, td {
+    /*border: 1px solid*/
+    /*#eaeaea;*/
+    padding: 5px 15px;
+}
+
+.plan-title{
+    font-size: 20px;
+    color: #5C4F45;
+    padding-bottom: 2px;
+
+}
+@media(min-width: 1024px)  {
+    .plans-title{
+        color: #5C4F45;
+        font-size: 27px;
+        padding-right: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+
+}
+}
+@media(max-width: 1024px)  {
+    .plans-title{
+        color: #5C4F45;
+        margin: auto;
+}
+}

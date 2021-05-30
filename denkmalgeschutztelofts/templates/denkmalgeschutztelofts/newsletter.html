@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% extends "denkmalgeschutztelofts/base.html" %}
+{% load static %}
+
+{% block title %}Denkmal Kapitalanlagen{% endblock %}
+
+{% block body %}
+    <div class="bckgrnd-creme sticky-nav-margin sticky-nav-margin-tablet">
+        
+        <div class="bnner-txt-gold">NEWSLETTER ABONNIEREN
+        </div>
+    </div>
+    <br>
+    <div class="phone-call">
+        <a href="tel:080016803398">
+            <img src="https://image.flaticon.com/icons/png/512/131/131133.png" width="26" alt="Jetzt Anrufen" title="Jetzt Anrufen">
+        </a>
+    </div>
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hide fade">
+        <div class="modal-dialog modal-confirm modal-sm">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-content__body text-center">
+                    <h4>Großartig!</h4>
+                    <p style="text-align: center">Wir haben Ihre Reservierung erhalten. Bitte überprüfen
+                        Sie Ihre Mailbox für
+                        weitere Informationen.</p>
+                    <a href="{% url "denkmalgeschutztelofts:index" %}" target="_parent">
+                        <button class="btn btn-success">
+                            <div class="text-center">
+                                <span>Zurück zur </span><span>Startseite</span><span><i
+                                    class="material-icons">&#xE5C8;</i></span>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-x">
+        <!-- <div class="contact100-more flex-col-c-m checkbox-stuff">
+            <ul>
+                <li>
+                    <input style="float: left;" id="c1" type="checkbox">
+                    <div style="margin-left: 50px; font-family: HelveticaNeue-Light, sans-serif;
+                    font-size: 12px; padding-left: 20px;">
+                        Duis congue tincidunt orci sed eleifend. Donec finibus dolor nec nunc fermentum, vel sollicitudin nisl tincidunt. Maecenas dolor libero, faucibus et aliquam at, cursus in mauris. Curabitur in neque lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque posuere ornare ultrices. Duis ornare dapibus sagittis. Suspendisse id efficitur erat. In dignissim nec massa id egestas. Suspendisse nulla dolor, efficitur eu leo molestie, venenatis dictum massa. Maecenas enim lacus, hendrerit in tempus eget, tempus quis mauris. Fusce efficitur at metus vitae pellentesque. Mauris scelerisque dui vitae vehicula sodales. Integer porttitor ligula eu nisi aliquam placerat. Aenean non tortor a quam tristique condimentum sit amet ut urna.
+                    </div>
+                </li>
+                <li>
+                    <input style="float: left;" id="c1" type="checkbox">
+                    <div style="margin-left: 50px; font-family: HelveticaNeue-Light, sans-serif;
+                    font-size: 12px; padding-left: 20px; margin-top: 20px;">
+                        Duis congue tincidunt orci sed eleifend. Donec finibus dolor nec nunc fermentum, vel sollicitudin nisl tincidunt. Maecenas dolor libero, faucibus et aliquam at, cursus in mauris. Curabitur in neque lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque posuere ornare ultrices. Duis ornare dapibus sagittis. Suspendisse id efficitur erat. In dignissim nec massa id egestas. Suspendisse nulla dolor, efficitur eu leo molestie, venenatis dictum massa. Maecenas enim lacus, hendrerit in tempus eget, tempus quis mauris. Fusce efficitur at metus vitae pellentesque. Mauris scelerisque dui vitae vehicula sodales. Integer porttitor ligula eu nisi aliquam placerat. Aenean non tortor a quam tristique condimentum sit amet ut urna.
+                    </div>
+                </li>
+            </ul>
+        </div> -->
+
+        <form id="form1" method="POST" class="contact100-form validate-form ipadpro-footer">
+            {% csrf_token %}
+            
+
+            <label class="label-input100" for="first-name">Nennen Sie uns Ihren Namen *</label>
+            <div class="rs3-wrap-input100">
+                <select name="Anrede">
+                    <option value="0">Anrede</option>
+                    <option value="1">Herr</option>
+                    <option value="2">Frau</option>
+                </select>
+                <span class="focus-input100"></span>
+                
+            </div>
+            <div class="wrap-input100 rs1-wrap-input100"
+                    data-validate="Vorname eingeben">
+                <input id="id_first_name" class="input100" type="text" name="vorname"
+                        placeholder="Vorname" value="{{ vorname }}"
+                         required>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 rs2-wrap-input100"
+                    data-validate="Nachname eingeben">
+                <input id="id_last_name" class="input100" type="text" name="nachname"
+                        placeholder="Nachname" value="{{ nachname }}"
+                        required>
+                <span class="focus-input100"></span>
+                
+            </div>
+        
+        
+            <label class="label-input100" for="email">Geben Sie Ihre E-Mail ein</label>
+            <div class="wrap-input100">
+                <input id="id_email" class="input100" type="text" name="email"
+                        placeholder="maxmustermann@mail.de"
+                        value="{{ email }}" required>
+                <span class="focus-input100"></span>
+            </div>
+
+            
+
+            <!-- <div class="container-contact100-form-btn">
+                <button type="submit" class="contact100-form-btn">
+                    Nachricht Senden
+                </button>
+            </div> -->
+            <!-- <div class="container-contact100-form-btn-sm">
+                <a class="contact100-form-btn-sm" href="{% url "denkmalgeschutztelofts:index" %}">Zurück zur Homepage</a>
+            </div> -->
+            <ul style="padding: 0;">
+                <li>
+                    <input style="float: left;" id="c1" type="checkbox" required>
+                    <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                        font-size: 14px; padding-left: 20px; font-weight: 500;">
+                            Hiermit willige ich in die dafür erforderliche Erhebung, Speicherung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein. Die Daten werden nicht an unbeteiligte Dritte weitergegeben und ich habe ein Recht auf Einsicht. Diese Erklärung kann ich jederzeit per E-Mail an <span style="font-weight: 700;">info@denkmalkapitalanlagen.de</span> widerrufen.
+Ich akzeptiere die <span style="font-weight: 700;cursor:pointer" onclick="window.location.href = '/datenschutz';">Datenschutzerklärung</span>.
+                        </div>
+                </li>
+                <li>
+                    <input style="float: left;" id="c1" type="checkbox" required>
+                    <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                    font-size: 14px; padding-left: 20px; font-weight: 500;">
+                                Ich stimme dem Newsletter-Tracking zu, damit die Inhalte anhand meines Nutzerverhaltens für mich optimiert werden können.
+                            </div>
+                </li>
+            </ul>
+            <button type="submit" class="contact100-form-btn button-kapital" style="margin-top: 3em; margin-left: 0; margin-bottom: 3em;">
+                Nachricht Senden
+            </button>
+        </form>
+        
+        
+    </div>
+       
+
+    {% if successful_submit %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#success-modal").modal('show');
+        });
+    </script>
+    {% endif %}
+    <script src="{% static "denkmalgeschutztelofts/js/contact_form.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/daterangepicker/moment.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/daterangepicker/daterangepicker.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/countdowntime/countdowntime.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/jquery/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/animsition/js/animsition.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/bootstrap/js/popper.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/select2/select2.min.js" %}"></script>
+    
+
+{% endblock %}

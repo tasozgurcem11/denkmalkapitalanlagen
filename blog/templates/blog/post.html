@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% extends "denkmalgeschutztelofts/base.html" %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block priority_css %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ post.description }}">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "blog/fonts/icomoon/style.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/jquery-ui.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "blog/fonts/flaticon/font/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "blog/css/style.css" %}">
+{% endblock %}
+
+{% block body %}
+    {% if post %}
+        {% if post.header_image %}
+            <div class="site-cover site-cover-sm same-height overlay single-page"
+                 style="background-image: url({{ post.header_image.url }}); object-fit: cover;">
+        {% else %}
+            <div class="site-cover site-cover-sm same-height overlay single-page"
+                 style="background-image: url({% static "blog/images/img_2.jpg" %});">
+        {% endif %}
+    <div class="container">
+        <div class="row same-height justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="post-entry text-center">
+                    <h1 class="mb-4"><a href="#">{{ post.title }}</a></h1>
+                    <div class="post-meta align-items-center text-center">
+                        <span>{{ post.date|date:"SHORT_DATE_FORMAT" }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+        <section class="site-section py-lg">
+            <div class="container container-sm">
+                <div class="row blog-entries element-animate">
+                    <div class="col-md-12 col-lg-12 main-content">
+                        <div class="post-content-body">
+                            {{ post.content|safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% else %}
+        <div class="col-md-12 col-lg-12 main-content text-center">
+            <div class="post-content-body">
+                <h1 style="padding: 12vw">Es tut mir leid, aber diesen Posten gibt es nicht!</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block priority_js %}
+    <script src="{% static "blog/js/jquery-3.3.1.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery-migrate-3.0.1.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery-ui.js" %}"></script>
+    <script src="{% static "blog/js/popper.min.js" %}"></script>
+    <script src="{% static "blog/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "blog/js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery.stellar.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery.countdown.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery.magnific-popup.min.js" %}"></script>
+    <script src="{% static "blog/js/bootstrap-datepicker.min.js" %}"></script>
+    <script src="{% static "blog/js/aos.js" %}"></script>
+
+    <script src="{% static "blog/js/main.js" %}"></script>
+{% endblock %}

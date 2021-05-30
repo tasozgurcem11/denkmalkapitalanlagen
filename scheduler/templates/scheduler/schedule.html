@@ -1,0 +1,199 @@
+<!doctype html>
+{% extends "denkmalgeschutztelofts/base.html" %}
+{% load static %}
+
+{% block title %}Telefontermin{% endblock %}
+
+{% block priority_css %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static "scheduler/css/modal.css" %}">
+    <link rel="stylesheet" href="{% static "scheduler/css/style.css" %}">
+    <link rel="stylesheet" href="{% static "scheduler/css/form.css" %}">
+{% endblock %}
+
+{% block body %}
+    <header class="cd-main-header text-center flex flex-column flex-center sticky-nav-margin sticky-nav-margin-tablet">
+        <h1 class="margin-top-md text-xl">Wählen Sie einen Termin aus für: <br>Telefontermin/Online-Besichtigung/Online-Beratung
+</h1>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %}
+                        class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </header>
+
+    <div class="d-flex flex-row justify-content-center align-items-center">
+        {% if prev_week_start_date %}
+            <div class="p-2">
+                <a href="{% url "scheduler:week" prev_week_start_date %}"
+                   style="text-decoration: none">
+                    <span>letzte Woche</span>
+                    <span class="material-icons" style="font-size: 48px; vertical-align: middle;">
+              navigate_before
+            </span>
+                </a>
+            </div>
+        {% endif %}
+        {% if next_week_start_date %}
+            <div class="p-2">
+                <a href="{% url "scheduler:week" next_week_start_date %}"
+                   style="text-decoration: none">
+            <span class="material-icons" style="font-size: 48px; vertical-align: middle;">
+              navigate_next
+            </span>
+                    <span>nächste Woche</span>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Success Modal -->
+    {% if successful_submit %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#success-modal").modal('show');
+            });
+        </script>
+    {% endif %}
+    <div id="success-modal" class="modal hide fade">
+        <div class="modal-dialog modal-confirm modal-sm">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-content__body text-center">
+                    <h4>Großartig!</h4>
+                    <p style="text-align: center">Wir haben Ihre Reservierung erhalten. Bitte überprüfen Sie Ihre Mailbox für
+                    weitere Informationen.</p>
+                    <a href="{% url "denkmalgeschutztelofts:index" %}" target="_parent">
+                        <button class="btn btn-success">
+                            <div class="text-center"><span>Zurück zur </span><span>Startseite</span><span><i
+                                    class="material-icons">&#xE5C8;</i></span>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+        <div class="cd-schedule__timeline">
+            <ul>
+                {% for time in times %}
+                    <li><span>{{ time }}</span></li>
+                {% endfor %}
+            </ul>
+        </div> <!-- .cd-schedule__timeline -->
+
+        {% if slots_dict %}
+            <div class="cd-schedule__events pb-5">
+                <ul>
+                    {% for day, slots in slots_dict.items %}
+                        <li class="cd-schedule__group">
+                            <div class="cd-schedule__top-info">
+                                <span>{{ day|capfirst }}</span>
+                                <span class="date">{{ slots.1 }}</span>
+                            </div>
+                            {% if slots.0 %}
+                                <ul id="events">
+                                    {% for slot in slots.0 %}
+                                        {% if slot.reserved %}
+                                            <li class="cd-schedule__event">
+                                                <a data-start="{{ slot.start_time|time:"H:i" }}"
+                                                   data-end="{{ slot.end_time|time:"H:i" }}"
+                                                   data-content="reserved"
+                                                   data-event="event-2">
+                                                    <em class="cd-schedule__name"
+                                                        style="font-style: normal">nicht verfügbar</em>
+                                                </a>
+                                            </li>
+                                        {% elif slot.outdated %}
+                                            <li class="cd-schedule__event">
+                                                <a data-start="{{ slot.start_time|time:"H:i" }}"
+                                                   data-end="{{ slot.end_time|time:"H:i" }}"
+                                                   data-content="outdated"
+                                                   data-event="event-3">
+                                                    <em class="cd-schedule__name"
+                                                        style="font-style: normal">nicht verfügbar</em>
+                                                </a>
+                                            </li>
+                                        {% else %}
+                                            <li class="cd-schedule__event">
+                                                <a data-start="{{ slot.start_time|time:"H:i" }}"
+                                                   data-end="{{ slot.end_time|time:"H:i" }}"
+                                                   data-content="slot/{{ slot.id }}"
+                                                   data-event="event-1">
+                                                    <em class="cd-schedule__name"
+                                                        style="font-style: normal">verfügbar</em>
+                                                </a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <ul>
+                                    <li class="cd-schedule__event">
+                                        <a data-start="{{ min_start_time|time:"H:i" }}"
+                                           data-end="{{ max_end_time|time:"H:i" }}"
+                                           data-content="reserved"
+                                           data-event="event-4">
+                                            <em class="cd-schedule__name"
+                                                style="font-style: normal">nicht verfügbarer
+                                                Tag</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div class="cd-schedule-modal">
+            <header class="cd-schedule-modal__header">
+                <div class="cd-schedule-modal__content">
+                    <span class="cd-schedule-modal__date"></span>
+                    <h3 class="cd-schedule-modal__name"></h3>
+                </div>
+
+                <div class="cd-schedule-modal__header-bg"></div>
+            </header>
+
+            <div class="cd-schedule-modal__body">
+                <div class="cd-schedule-modal__event-info"></div>
+                <div class="cd-schedule-modal__body-bg"></div>
+            </div>
+
+            <a href="#0" class="cd-schedule-modal__close text-replace">Schließen</a>
+        </div>
+
+        <div class="cd-schedule__cover-layer"></div>
+    </div> <!-- .cd-schedule -->
+    
+    <!-- BACK TO TOP -->
+    <div class="row">
+        <div class="scroll-to-top border-0 mb-0">
+            <a class="back-to-top" href="#top">
+                <img srcset="{% static "denkmalgeschutztelofts/images/general/top-grey.png" %}" height="32px" width="32px" alt="Top">
+            </a>
+        </div>
+    </div>
+    <!-- end -->
+
+    <!-- util functions included in the CodyHouse framework -->
+    <script src="{% static "scheduler/js/util.js" %}"></script>
+    <script src="{% static "scheduler/js/main.js" %}"></script>
+    <script src="{% static "scheduler/js/form.js" %}"></script>
+{% endblock %}

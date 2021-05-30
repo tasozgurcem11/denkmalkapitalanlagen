@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% extends "denkmalgeschutztelofts/base.html" %}
+{% load static %}
+
+{% block title %}Denkmal Kapitalanlagen{% endblock %}
+
+{% block body %}
+
+
+    <div class="bckgrnd-creme">
+        
+        <div class="bnner-txt-gold">HÄUFIG GESTELLTE FRAGEN
+        </div>
+    </div>
+    <br>
+    <div class="phone-call">
+        <a href="tel:080016803398">
+            <img src="https://image.flaticon.com/icons/png/512/131/131133.png" width="26" alt="Jetzt Anrufen" title="Jetzt Anrufen">
+        </a>
+    </div>
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hide fade">
+        <div class="modal-dialog modal-confirm modal-sm">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-content__body text-center">
+                    <h4>Großartig</h4>
+                    <p style="text-align: center">Wir haben Ihre Reservierung erhalten. Bitte überprüfen
+                        Sie Ihre Mailbox für
+                        weitere Informationen.</p>
+                    <a href="{% url "denkmalgeschutztelofts:index" %}" target="_parent">
+                        <button class="btn btn-success">
+                            <div class="text-center">
+                                <span>Zurück zur </span><span>Startseite</span><span><i
+                                    class="material-icons">&#xE5C8;</i></span>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-x" style="margin-bottom: 50px; margin-top: 30px;">
+        {% include 'denkmalgeschutztelofts/faq-section.html' %}
+    </div>
+        
+    <!-- <div class="container-fluid ">
+        <div class="row" style="background-color: #c9a877;height: 400px;margin-top: -30px;">
+            <div class="domino2" data-aos="zoom-in-down">
+                <h2 class="domino-content-left domino-title color_gold">Kont
+    
+    
+                </h2>
+                <p class="domino-content-left domino-p  align-middle white">Neben den damals relativ
+                    günstigen Mieten ab den
+                    1940er Jahren, waren es auch diese Raum- und Lichtverhältnisse deren
+                    Anziehungskraft sich Künstler New
+                    Yorks nicht entziehen konnten. Sie zogen in diese Lager- und Produktionsstätten
+                    ein und nutzten all den
+                    Raum sowohl zum Leben als auch zum Schaffen. Steigende Grundstückspreise führten
+                    u.a. dazu, dass
+                    Industrie beispielsweise aus New York City wegzog und sich in den Vororten
+                    niederließ. Der Beginn einer
+                    neuen Definition des Wohnens im Spannungsfeld zwischen Historie und Moderne.
+    
+    
+                </p>
+            
+            </div>
+            <div class="domino1" data-aos="zoom-in" >
+                <img src="{% static "denkmalgeschutztelofts/images/project2.jpg" %}" class="img-fluid blog-image">
+            </div>
+        </div>
+    </div> -->
+    {% if successful_submit %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#success-modal").modal('show');
+        });
+    </script>
+    {% endif %}
+    <script>
+        (function($) {
+    $(document).ready(function() {
+      $('.accordion-item a').click(function() {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active").find(".answer").slideUp();
+        }
+        else {
+            $('.accordion-item a').removeClass('active');
+            $(this).addClass('active');
+        }
+        
+      });
+    });
+  })(jQuery);
+    </script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/daterangepicker/moment.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/daterangepicker/daterangepicker.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/countdowntime/countdowntime.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/jquery/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/animsition/js/animsition.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/bootstrap/js/popper.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/select2/select2.min.js" %}"></script>
+    
+
+{% endblock %}

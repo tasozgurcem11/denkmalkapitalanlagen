@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+{% extends "denkmalgeschutztelofts/base.html" %}
+{% load static %}
+
+{% block title %}Rübenstraße | Denkmal Kapitalanlagen {% endblock %}
+
+{% block body %}
+<div id="carouselExampleIndicatorsd" class="carousel slide sticky-nav-margin dsnone2" data-ride="carousel" data-interval="8000">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicatorsd" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicatorsd" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicatorsd" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicatorsd" data-slide-to="3"></li>
+
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img alt="Das Ensemble Kaiser & Dicke" src="{% static 'denkmalgeschutztelofts/images/RB/rb1.jpg' %}"
+                class="main-slider-image d-block w-100"
+                     style="height: 350px;">
+
+            </div>
+            <div class="carousel-item ">
+                <img alt="Corona" src="{% static 'denkmalgeschutztelofts/images/RB/rb5.jpg' %}"
+                class="main-slider-image d-block w-100"
+                     style="height: 350px;" alt="...">
+
+            </div>
+            <div class="carousel-item ">
+                <img alt="Corona" src="{% static 'denkmalgeschutztelofts/images/RB/rb2.jpg' %}"
+                class="main-slider-image d-block w-100"
+                     style="height: 350px;" alt="...">
+
+            </div>
+            <div class="carousel-item ">
+                <img alt="Corona" src="{% static 'denkmalgeschutztelofts/images/RB/rb6.jpg' %}"
+                class="main-slider-image d-block w-100"
+                     style="height: 350px;" alt="...">
+
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicatorsd" role="button"
+          data-slide="prev" style="transform: rotate(180deg);height: 40px;margin-top: auto;margin-bottom:auto;opacity: 1;background-color: #D0E5EA;left: 5px;border-radius: 5%">
+{#           <span class="carousel-control-prev-icon"  aria-hidden="true"></span>#}
+           <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="build-client-components-Layout-ImageGallery-ControlButton__arrow"><path d="M10.58 12.21a.375.375 0 0 0 .533 0l3.943-3.943a.377.377 0 0 0 0-.534L11.113 3.79a.377.377 0 1 0-.533.534l3.316 3.316H1.211a.377.377 0 0 0 0 .755h12.65l-3.281 3.281a.377.377 0 0 0 0 .533z"></path></svg>
+           <span class="sr-only" >Previous</span>
+       </a>
+       <a class="carousel-control-next" href="#carouselExampleIndicatorsd" role="button"
+          data-slide="next" style="height: 40px;margin-top: auto;margin-bottom:auto;opacity: 1;background-color: #D0E5EA;right: 5px;border-radius: 5%" >
+{#           <span class="carousel-control-next-icon" aria-hidden="true" ></span>#}
+           <svg  aria-hidden="true" width="16"  height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="build-client-components-Layout-ImageGallery-ControlButton__arrow"><path d="M10.58 12.21a.375.375 0 0 0 .533 0l3.943-3.943a.377.377 0 0 0 0-.534L11.113 3.79a.377.377 0 1 0-.533.534l3.316 3.316H1.211a.377.377 0 0 0 0 .755h12.65l-3.281 3.281a.377.377 0 0 0 0 .533z"></path></svg>
+           <span class="sr-only">Next</span>
+       </a>
+</div>
+<div class="parallax background-creme height-setting65 dsnone2" style="padding-top: 30px;">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h2 class=" domino-title-center color_2" data-aos="fade-up" style="font-style: italic;font-weight: 600">Rübenstraße 37</h2>
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="build-client-components-Layout-LocationLink__locationIcon"><g fill="none" fill-rule="evenodd"><path d="M12 10.9c-1.213 0-2.2-.987-2.2-2.2s.987-2.2 2.2-2.2 2.2.987 2.2 2.2-.987 2.2-2.2 2.2zm-.136 8.585L7.258 12.83c-1.752-2.332-1.496-6.17.55-8.216A5.814 5.814 0 0 1 11.945 2.9c1.564 0 3.033.61 4.139 1.715 2.045 2.045 2.298 5.884.545 8.222l-4.602 6.648h-.164zM12 7.3a1.4 1.4 0 1 0 .001 2.801A1.4 1.4 0 0 0 12 7.3zm3.982 5.069c1.538-2.046 1.32-5.408-.462-7.19A5.034 5.034 0 0 0 11.946 3.7a5.022 5.022 0 0 0-3.571 1.48c-1.78 1.78-2.001 5.14-.469 7.183l4.04 5.833 4.036-5.827zm-.333 3.435c3.206.377 5.451 1.443 5.451 2.646 0 1.504-3.613 2.65-9.1 2.65s-9.1-1.146-9.1-2.65c0-1.202 2.244-2.268 5.454-2.65a.4.4 0 1 1 .093.796C5.7 16.92 3.7 17.827 3.7 18.45c0 .866 3.696 1.85 8.3 1.85 4.604 0 8.3-.984 8.3-1.85 0-.623-2-1.53-4.744-1.85a.4.4 0 1 1 .093-.796z" fill-rule="nonzero" fill="#000"></path></g></svg>
+              <p style="text-align: center">Wuppertal, DE</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+{# <div class="container-fluid pad-zero dsnone2">#}
+{#    <img src="{% static "denkmalgeschutztelofts/images/RB/rb1.jpg" %}" class="img-fluid slider-image" >#}
+{#</div>#}
+
+<div class="parallax background-oyster height-setting33 dsnone2" style="margin-top: 0px;">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h2 class=" domino-title-center color_2" data-aos="fade-up" >Highlights</h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+    <section class="apartments pt-120 pb-90 dsnone2">
+                <div class="container ">
+{#                    <div class="row equalizer-row justify-content-center">#}
+{#                        <div class="col-xl-8 col-lg-10">#}
+{#                            <div class="section-title text-center pl-40 pr-40 mb-80 wow fadeInDown animated" data-animation="fadeInDown animated" data-delay=".2s">#}
+{#                                <h3 data-aos="fade-in" data-aos-delay="250" style="padding-top: 40px">Highlights</h3>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+				   <div class="col-lg-12 ">
+                  <div class="tab-content py-3 px-3 px-sm-0 mt-50" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+					 <div class="row" >
+						<div class="col-lg-12" >
+{#							<h2 class="plan-title" >ERDGESCHOSS</h2>#}
+						<ul>
+							<li>Wohneinheiten:<span class="after">8</span></li>
+							<li>Wohnfläche:<span class="after">500,81 m²</span></li>
+							<li>Denkmal-AfA:<span class="after">60%</span></li>
+                            <li>Preis pro m²:<span class="after">3.580 €</span></li>
+                            <li>Kaufpreis:<span class="after">1.792.899,80 €</span></li>
+						</ul>
+						</div>
+
+					</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+
+
+    </div>
+    <button type="submit" style="margin: 2em auto;padding: 0;background-color: #D0E5EA;color: #5C4F45;" class="contact100-form-btn" onclick="window.location.href = '/angebot-anfordern/Rübenstraße/';">
+             angebot anfordern
+        </button>
+</section>
+<div id="carouselExampleIndicators" class="carousel slide dsnone sticky-nav-margin-tablet" data-ride="carousel" data-aos="fade-in" data-aos-delay="1000">
+  <!-- <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    </ol> -->
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="height: max-content">
+      <div class="row background-grey" style="height: max-content;">
+        <div class="domino2-rub" data-aos="zoom-in">
+          <img src="{% static "denkmalgeschutztelofts/images/RB/rb2.jpg" %}" class="img-fluid project-image-long"
+            height="450px">
+        </div>
+        <div class="domino1-rub background-grey" data-aos="zoom-in-down">
+          <h2 class="table-hdr">Rübenstraße 37 Highlights
+          </h2>
+          <table class="table borderless">
+            <hr class="hr-line26" />
+            <thead>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Wohneinheiten:</th>
+                <td>8</td>
+              </tr>
+              <tr>
+                <th scope="row">Wohnfläche:</th>
+                <td>500,81 m²</td>
+              </tr>
+              <tr>
+                <th scope="row">Denkmal-AfA:</th>
+                <td>60%</td>
+              </tr>
+            <tr>
+                <th scope="row">Preis pro m²:</th>
+                <td>3.580 €</td>
+              </tr>
+            <tr>
+                <th scope="row">Kaufpreis:</th>
+                <td>1.792.899,80 €</td>
+              </tr>
+
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="parallax background-oyster height-setting-blue" style="margin-top: 0px;">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h2 class=" domino-title-center color_2" data-aos="fade-up" >Jetzt anfragen</h2>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container-h" style="border-top: 0px solid #f2f2f2; background-color: #f2f2f2;">
+
+  <div class="wrap-contact100">
+    <form method="POST" id="form-kontakt" class="contact100-form validate-form" style="padding-right: 9%; padding-left: 9%">
+                {% csrf_token %}
+
+
+                <label class="label-input100" for="first-name" style="margin-top: 0;">Nennen Sie uns Ihren Namen *</label>
+                <div class="wrap-input100 rs3-wrap-input100">
+                    <select class="anrede-outline" name="Anrede">
+                        <option value="0">Anrede</option>
+                        <option value="1">Herr</option>
+                        <option value="2">Frau</option>
+                    </select>
+                    <span class="focus-input100"></span>
+
+                </div>
+                <div class="wrap-input100 rs1-wrap-input100 validate-input"
+                    data-validate="Vorname eingeben">
+                    <input id="id_first_name" class="input100" type="text" name="vorname"
+                        placeholder="Vorname"
+                         required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.first_name.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <div class="wrap-input100 rs2-wrap-input100 validate-input"
+                    data-validate="Nachname eingeben">
+                    <input id="id_last_name" class="input100" type="text" name="nachname"
+                        placeholder="Nachname"
+                        required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.last_name.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <label class="label-input100" for="phone">Telefonnummer eingeben *</label>
+                <div class="wrap-input100 validate-input"
+                    data-validate="Gültige Telefonnummer ist erforderlich">
+                    <input id="id_phone_number" class="input100" type="tel" name="telefon" required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.phone_number.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <label class="label-input100" for="email">Geben Sie Ihre E-Mail ein *</label>
+                <div class="wrap-input100">
+                    <input id="id_email" class="input100" type="text" name="email"
+                        placeholder="maxmustermann@mail.de"
+                        required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.email.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <label class="label-input100" for="message">Nachricht *</label>
+                <div class="wrap-input100 validate-input" data-validate="Nachricht ist erforderlich" style="min-height: 80px;">
+                    <textarea id="id_message" class="input100" name="nachricht" style="font-size: 18px !important; padding: 10px 25px !important; margin-bottom: 0 !important; border: unset !important; min-height: 120px !important; color: #666666 !important;">Bitte informieren Sie mich über das  Projekt "Rübenstraße 37" in Wuppertal.</textarea>
+
+                    </textarea>
+                    <span class="focus-input100"></span>
+                    {% for err in form.message.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+                <ul style="padding: 0;">
+                    <li>
+                        <input style="float: left;" id="c1" type="checkbox" required>
+                        <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                        font-size: 14px; padding-left: 20px; font-weight: 500;">
+                            Hiermit willige ich in die dafür erforderliche Erhebung, Speicherung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein. Die Daten werden nicht an unbeteiligte Dritte weitergegeben und ich habe ein Recht auf Einsicht. Diese Erklärung kann ich jederzeit per E-Mail an <span style="font-weight: 700;">info@denkmalkapitalanlagen.de</span> widerrufen.
+Ich akzeptiere die <span style="font-weight: 700;cursor:pointer" onclick="window.location.href = '/datenschutz';">Datenschutzerklärung</span>.
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <input style="float: left;" id="c1" type="checkbox" required>
+                        <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                        font-size: 14px; padding-left: 20px; font-weight: 500;">
+                            Ich stimme dem Newsletter-Tracking zu, damit die Inhalte anhand meines Nutzerverhaltens für mich optimiert werden können.
+
+                        </div>
+                    </li> -->
+                </ul>
+                <div class="container-contact100-form-btn">
+                    <button type="submit" class="contact100-form-btn button-kapital">
+                        Nachricht Senden
+                    </button>
+                </div>
+                <!-- <div class="container-contact100-form-btn-sm">
+                    <a class="contact100-form-btn-sm" href="{% url "denkmalgeschutztelofts:index" %}">Zurück zur Homepage</a>
+                </div> -->
+            </form>
+
+    <div class="contact100-more flex-col-c-m dnone-responsive" style="margin-top: 5em; width: 34%; max-height: 40em;
+                background-image: url('{% static "denkmalgeschutztelofts/images/RB/rb1.jpg" %}')">
+    </div>
+  </div>
+
+</div>
+
+{#<div class="dsnone2 sticky-nav-margin" data-aos="fade-in" data-aos-delay="1000">#}
+{#    <div class="container-fluid pad-zero">#}
+{#                      <img src="{% static "denkmalgeschutztelofts/images/RB/rb1.jpg" %}" class="img-fluid slider-image" style="height: 12.5em">#}
+{#                  </div>#}
+{##}
+{#            <div class="Rtable Rtable--2cols">#}
+{##}
+{#                <div class="Rtable-cell" style="text-align: left;font-weight: 400">Wohneinheiten:</div>#}
+{#                <div class="Rtable-cell" style="text-align: right;font-weight: 400">8</div>#}
+{##}
+{#                <div class="Rtable-cell" style="text-align: left;font-weight: 400">Flächen:</div>#}
+{#                <div class="Rtable-cell" style="text-align: right;font-weight: 400">29-105 m²</div>#}
+{##}
+{#                <div class="Rtable-cell" style="text-align: left;font-weight: 400">Abschreibung:</div>#}
+{#                <div class="Rtable-cell" style="text-align: right;font-weight: 400">60%</div>#}
+{##}
+{#                <div class="Rtable-cell" style="text-align: left;font-weight: 400">KfW Tilgungszuschuss:</div>#}
+{#                <div class="Rtable-cell" style="text-align: right; display: flex; align-items: center; justify-content: flex-end;font-weight: 400">25%</div>#}
+{##}
+{#                <div class="Rtable-cell" style="text-align: left;font-weight: 400">KfW-Effizienzhaus Förderkredit bis zu:</div>#}
+{#                <div class="Rtable-cell" style="text-align: right; display: flex; align-items: center; justify-content: flex-end;font-weight: 400">120.000</div>#}
+{##}
+{#                <div class="Rtable-cell" style="text-align: left;font-weight: 400">Kaufpreise:</div>#}
+{#                <div class="Rtable-cell" style="text-align: right;font-weight: 400">106.254 - 375.291 €</div>#}
+{#            </div>#}
+{#            <div class="row" style="margin-bottom: 2em;display: flex;#}
+{#  justify-content: center;">#}
+{#                <div class="col-6" style="padding: 0">#}
+{#                    <button type="submit" style="min-width: 180px;margin: 2em auto 0;padding: 0;background-color: #D0E5EA;color: #5C4F45;" class="contact100-form-btn" onclick="window.location.href = '/angebot-anfordern/Rübenstraße/';">#}
+{#                         Angebot Anfordern#}
+{#                    </button>#}
+{#                </div>#}
+{#            </div>#}
+{#</div>#}
+
+
+
+
+
+  <div class="parallax background-oyster height-setting-blue dsnone" style="margin-top: 0px;">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h2 class=" domino-title-center color_2" data-aos="fade-up" >Rübenstraße 37</h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<div class="dsnone container exklusivitat " data-aos="fade-up">
+  <div class="row response-row57 equalizer-row">
+    <div class="domino3" data-aos="fade-right">
+      <img src='{% static "denkmalgeschutztelofts/images/RB/rb2.jpg" %}' alt="Tradition trifft auf Moderne" class="img-fluid info-img responsenone" style="height: 250px">
+    </div>
+    <div class="domino4">
+      <h3 data-aos="fade-in" data-aos-delay="250">Tradition trifft auf Moderne</h3>
+      <hr class="hr-line29" data-aos="fade-in" data-aos-delay="500"/>
+      <p data-aos="fade-in" data-aos-delay="750">
+Das Objekt verbindet den Charme eines Altbaus mit modernster Ausstattung und zeitlosem Design. So bleibt die Originalsubstanz für Folgegenerationen weitestgehend erhalten, gleichzeitig manifestiert sich ein Stück Geschichte.
+      </p>
+      <p data-aos="fade-in" data-aos-delay="1000" >
+
+Die Komplettsanierung erfolgt nach festgelegten Standards und gestalterischen Auflagen des Denkmalschutzamts. Wir verwenden ausschließlich ökologisch wertvolle und schadstoffarme Baumaterialien. Unser Ziel ist die Grenzen des festgelegten jährlichen Primärenergiebedarfs und Transmissionswärmeverlusts einzuhalten – soweit dies mit dem Objekt und den Denkmalschutzauflagen vereinbar ist. Deutschlands größter Energieberater unterstützt uns im Hinblick auf die optimale Zuteilung von KfW-Fördermitteln und einer Renditeoptimierung.
+      <br>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container exklusivitat dsnone" data-aos="fade-in">
+  <div class="row response-row108 equalizer-row">
+    <div class="domino3 vertical-pad">
+      <h3 data-aos="fade-in">Natürlich Modern Wohnen</h3>
+      <hr class="hr-line62" data-aos="fade-in"/>
+      <p data-aos="fade-in">
+        Hochwertiges Fertigparkett aus Eiche in Wohn-
+, Schlaf-, Kinderzimmer sowie Diele und ein dezenter weißer Glattputz schaffen eine helle und freundliche Atmosphäre: Die Räume sind lichtdurchflutet, alles wirkt großzügig, offen und klar. Weiß lackierte Türen und Fenster im historischen Stil in Kombination mit puristi- schen Türgarnituren aus Edelstahl runden das Gesambild ab. Eine dezente Farbpalette in Beige, Crème, Hellgrau bei Möbeln und Accessoires unterstreicht diesen edlen und stimmigen Look. Gleichzeitig lässt das zurückhaltende Design von »Elfenbein-Harmonie« individueller Gestaltung mit eigenen farblichen Akzente viel Freiraum.
+      </p>
+    </div>
+    <div class="domino3" data-aos="fade-right">
+      <img src='{% static "denkmalgeschutztelofts/images/RB/rb6.jpg" %}' alt="Standort Wuppertal" class="img-fluid info-img2 responsenone" style="height: 250px">
+    </div>
+  </div>
+
+</div>
+
+<div class="parallax background-oyster height-setting-blue" style="margin-top: 0px;">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h2 class=" domino-title-center color_2" data-aos="fade-up" >GRUNDRISS</h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+    <section class="apartments pt-120 pb-90">
+                <div class="container">
+
+
+              <div class="row" style="padding-top: 20px">
+
+                <div class="col-lg-12">
+                  <nav>
+                    <div class="apartments-nav nav nav-tabs nav-fill" id="nav-tab" role="tablist" >
+                       <h1 class="plans-title" >WOHNUNG:</h1>
+                      <a class="nav-item nav-link active" id="nav-home1-tab" data-toggle="tab" href="#nav-home1" role="tab" aria-controls="nav-home1" aria-selected="true">01</a>
+                      <a class="nav-item nav-link" id="nav-2-tab" data-toggle="tab" href="#nav-2" role="tab" aria-controls="nav-2" aria-selected="false">02</a>
+                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">03</a>
+                      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">04</a>
+                      <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">05</a>
+                      <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-about" aria-selected="false">06</a>
+
+                    </div>
+                  </nav>
+				  </div>
+				  <div class="col-lg-3">
+			  </div>
+				   <div class="col-lg-12 ">
+                  <div class="tab-content py-3 px-3 px-sm-0 mt-50" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home1-tab">
+					 <div class="row" >
+						<div class="col-lg-5" style="margin-top: 40px">
+							<h2 class="plan-title" >ERDGESCHOSS</h2>
+						<ul>
+							<li>Bad <span class="after">2,52 m²</span></li>
+							<li>Küche <span class="after">6,9 m²</span></li>
+							<li>Diele<span class="after">2,58  m²</span></li>
+							<li>Raum 1 <span class="after"> 15,68 m²</span></li>
+                            <li style="font-weight: 800;color: #000;font-size: 16px;">GESAMTFLÄCHE<span class="after"> 27,68 m²</span></li>
+						</ul>
+						</div>
+						<div class="col-lg-7">
+							<div class="apartments-img1">
+								<img src="{% static "denkmalgeschutztelofts/images/plans/plan01.jpg" %}"  alt="Plan1"/>
+							</div>
+						</div>
+					</div>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-2-tab">
+                     <div class="row">
+                        <div class="col-lg-5" style="margin-top: 40px">
+							<h2 class="plan-title" >ERDGESCHOSS</h2>
+                         <ul>
+							<li>Bad <span class="after">10,04 m²</span></li>
+							<li>Küche <span class="after">12,49 m²</span></li>
+							<li>Diele<span class="after"> 3,56 m²</span></li>
+							<li>Raum 1 <span class="after"> 13,51  m²</span></li>
+							<li>Raum 2 <span class="after"> 19,75 m²</span></li>
+                            <li>BALKON<span class="after"> 4,34 m² (2,17 m²) </span></li>
+                            <li style="font-weight: 800;color: #000;font-size: 16px;">GESAMTFLÄCHE<span class="after"> 61,52 m²</span></li>
+
+						</ul>
+						</div>
+						<div class="col-lg-7">
+							<div class="apartments-img">
+								<img src="{% static "denkmalgeschutztelofts/images/plans/plan02.png" %}" alt="Plan2"/>
+							</div>
+						</div>
+					</div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                     <div class="row">
+                        <div class="col-lg-5" style="margin-top: 40px">
+							<h2 class="plan-title" >1. OBERGESCHOSS</h2>
+                         <ul>
+							<li>Bad <span class="after">14,12 m²</span></li>
+							<li>Küche <span class="after">13,27 m²</span></li>
+							<li>Diele<span class="after"> 7,56 m²</span></li>
+							<li>Raum 1 <span class="after"> 14,01  m²</span></li>
+							<li>Raum 2 <span class="after"> 16,10 m²</span></li>
+                            <li>Raum 3 <span class="after">19,40  m²</span></li>
+							<li>Raum 4 <span class="after"> 19,85  m²</span></li>
+                            <li>BALKON<span class="after"> 4,34 m² (2,17 m²) </span></li>
+                            <li style="font-weight: 800;color: #000;font-size: 16px;">GESAMTFLÄCHE<span class="after"> 106,48 m²</span></li>
+
+						</ul>
+						</div>
+						<div class="col-lg-7">
+							<div class="apartments-img">
+								<img src="{% static "denkmalgeschutztelofts/images/plans/plan3.jpg" %}" alt="Plan2"/>
+							</div>
+						</div>
+					</div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                     <div class="row">
+
+                        <div class="col-lg-5" style="margin-top: 40px">
+							<h2 class="plan-title" >2. OBERGESCHOSS</h2>
+                        <ul>
+							<li>Bad <span class="after">14,12 m²</span></li>
+							<li>Küche <span class="after">13,27 m²</span></li>
+							<li>Diele<span class="after"> 7,56 m²</span></li>
+							<li>Raum 1 <span class="after"> 14,01  m²</span></li>
+							<li>Raum 2 <span class="after"> 16,10 m²</span></li>
+                            <li>Raum 3 <span class="after">19,40  m²</span></li>
+							<li>Raum 4 <span class="after"> 19,85  m²</span></li>
+                            <li>Balkon<span class="after"> 4,34 m² (2,17 m²) </span></li>
+                            <li style="font-weight: 800;color: #000;font-size: 16px;">GESAMTFLÄCHE<span class="after"> 106,48 m²</span></li>
+						</ul>
+						</div>
+						<div class="col-lg-7">
+							<div class="apartments-img">
+								<img src="{% static "denkmalgeschutztelofts/images/plans/plan4.jpg" %}" alt="Plan3"/>
+							</div>
+						</div>
+					</div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                     <div class="row">
+						<div class="col-lg-5" style="margin-top: 40px">
+							<h2 class="plan-title" >3. OBERGESCHOSS</h2>
+                        <ul>
+							<li>Bad <span class="after">14,12 m²</span></li>
+							<li>Küche <span class="after">13,27 m²</span></li>
+							<li>Diele<span class="after"> 7,56 m²</span></li>
+							<li>Raum 1 <span class="after"> 14,01  m²</span></li>
+							<li>Raum 2 <span class="after"> 16,10 m²</span></li>
+                            <li>Raum 3 <span class="after">19,40  m²</span></li>
+							<li>Raum 4 <span class="after"> 19,85  m²</span></li>
+                            <li>Balkon<span class="after"> 4,34 m² (2,17 m²) </span></li>
+                            <li style="font-weight: 800;color: #000;font-size: 16px;">GESAMTFLÄCHE<span class="after"> 106,48 m²</span></li>
+						</ul>
+						</div>
+						<div class="col-lg-7">
+							<div class="apartments-img">
+								<img src="{% static "denkmalgeschutztelofts/images/plans/plan5.jpg" %}" alt="Plan4"/>
+							</div>
+						</div>
+					</div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-last" role="tabpanel" aria-labelledby="nav-about-tab">
+                     <div class="row">
+						<div class="col-lg-5" style="margin-top: 40px">
+							<h2 class="plan-title" >DACHGESCHOSS</h2>
+                        <ul>
+							<li>Bad <span class="after">7,75 m²</span></li>
+							<li>Küche <span class="after">12,23 m²</span></li>
+							<li>Diele<span class="after"> 7,31 m²</span></li>
+							<li>Raum 1 <span class="after"> 12,09 m²</span></li>
+							<li>Raum 2 <span class="after"> 15,22 m²</span></li>
+                            <li>Raum 3 <span class="after"> 17,93 m²</span></li>
+							<li>Raum 4 <span class="after"> 18,03 m²</span></li>
+                            <li style="font-weight: 800;color: #000;font-size: 16px;">GESAMTFLÄCHE<span class="after"> 92,56 m²</span></li>
+						</ul>
+						</div>
+						<div class="col-lg-7">
+							<div class="apartments-img">
+								<img src="{% static "denkmalgeschutztelofts/images/plans/plan6.jpg" %}" alt="Plan5"/>
+							</div>
+						</div>
+					</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+        </div>
+      </div>
+
+
+                </div>
+</section>
+
+
+<div class="parallax background-oyster height-setting-blue" style="margin-top: 0px;">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h2 class=" domino-title-center color_2" data-aos="fade-up" >Lage</h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container exklusivitat dsnone2" style="min-height: 15em" data-aos="fade-in">
+  <div class="row response-row108 equalizer-row" style="height: 5em">
+    <div class="domino4">
+      <h3 data-aos="fade-in">Wuppertal, DE</h3>
+      <hr class="hr-line68" data-aos="fade-in"/>
+      <p data-aos="fade-in">
+        Die liebenswerte Schwebebahn-Stadt im Grünen mit großem Erholungswert und Cityflair sowie guter Anbindung an
+        Rheinschiene und Ruhrgebiet entwickelt sich zu einem Investitionsmagneten.
+      </p>
+
+    </div>
+    <div class="domino3" data-aos="fade-right">
+      <img src='{% static "denkmalgeschutztelofts/images/wuppertal1.jpg" %}' alt="Standort Wuppertal" class="img-fluid info-img2 responsenone">
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+{#<div class= "dsnone" >#}
+{#    <div class="Rtable Rtable--2cols">#}
+{##}
+{#        <div class="Rtable-cell" style="text-align: left;font-weight: 600">WUPPERTAL</div>#}
+{#        <div class="Rtable-cell" style="text-align: right;font-weight: 600">EINWOHNER</div>#}
+{##}
+{#        <div class="Rtable-cell" style="text-align: left;font-weight: 400">2015</div>#}
+{#        <div class="Rtable-cell" style="text-align: right">350.046</div>#}
+{##}
+{#        <div class="Rtable-cell" style="text-align: left;font-weight: 400">2016</div>#}
+{#        <div class="Rtable-cell" style="text-align: right">355.300</div>#}
+{##}
+{#        <div class="Rtable-cell" style="text-align: left;font-weight: 400">2017</div>#}
+{#        <div class="Rtable-cell" style="text-align: right; ">360.000</div>#}
+{##}
+{#        <div class="Rtable-cell" style="text-align: left;font-weight: 400">BIS 2020</div>#}
+{#        <div class="Rtable-cell" style="text-align: right; ">363.000</div>#}
+{#    </div>#}
+{#    <div class="row" style="margin-bottom: 2em;">#}
+{#        <button type="submit" style="min-width: 140px;margin: 2em auto;padding: 0;background-color: #D0E5EA;color: #5C4F45;" class="contact100-form-btn" onclick="window.location.href = '/angebot-anfordern/Rübenstraße/';">#}
+{#             Mehr Erfahren#}
+{#        </button>#}
+{#    </div>#}
+
+{#<div class="container-fluid dsnone2 pad-zero">#}
+{# <img src="{% static "denkmalgeschutztelofts/images/wup21.jpg" %}" class="img-fluid slider-image" alt="Standort Wuppertal>#}
+{#</div>#}
+
+
+<section class="apartments pt-120 pb-90 dsnone2">
+                <div class="container ">
+                 <div class="col-lg-12 ">
+                  <div class="tab-content py-3 px-3 px-sm-0 mt-50" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+					 <div class="row" >
+						<div class="col-lg-12" ">
+{#							<h2 class="plan-title" >ERDGESCHOSS</h2>#}
+                            <ul>
+                                <li style="font-weight: bolder;font-size: 17px">WUPPERTAL<span class="after">EINWOHNER</span></li>
+                                <li>2015<span class="after">350.046</span></li>
+                                <li>2016<span class="after">355.300</span></li>
+                                <li>2017<span class="after">360.000</span></li>
+                                <li>BIS 2020<span class="after">363.000</span></li>
+                            </ul>
+						</div>
+					</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" style="margin: 2em auto;padding: 0;background-color: #D0E5EA;color: #5C4F45;" class="contact100-form-btn" onclick="window.location.href = '/angebot-anfordern/Rübenstraße/';">
+             Mehr Erfahren
+    </button>
+</section>
+ <div class="dsnone2" style="width: 100%;"><iframe width="100%" height="450px" frameborder="0" scrolling="no"  q=51.2700665,7.2267755
+    marginheight="0" marginwidth="0"
+    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=de&amp;q=51.2700665,7.2267755&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+</div>
+<div class="container exklusivitat" data-aos="fade-up">
+  <div class="row response-row108 equalizer-row">
+    <div class="domino4">
+      <h3 data-aos="fade-up">Standort Wuppertal</h3>
+      <hr class="hr-line6" data-aos="fade-up"/>
+      <p data-aos="fade-up">
+        Die liebenswerte Schwebebahn-Stadt im Grünen mit großem Erholungswert und Cityflair sowie guter Anbindung an
+        Rheinschiene und Ruhrgebiet entwickelt sich zu einem Investitionsmagneten.
+      </p>
+      <p data-aos="fade-up">
+        Wuppertal ist seit jeher das bedeutendste Industrie-, Wirtschafts- und Bildungszentrum der Region und steht
+        für Innovation, Fortschritt und Unternehmertum. Und auch heute erfindet man sich hier immer wieder neu, alles
+        ist in Bewegung und macht sich auf in Richtung Zukunft. Die grüne Stadt auf den Hügeln verbindet attraktives
+        Wohnen und mit hohem Freizeit- und Erholungswert. Das Kultur- und Bildungsangebot ist hervorragend,
+        ebenso wie die Infrastruktur mit vielen attraktiven Geschäften, Cafés, Restaurants und dem gut ausgebauten
+        ÖPNV. Durch die zentrale Lage im Herzen von NRW ist Wuppertal sehr gut an andere Städte angebunden.
+      </p>
+    </div>
+    <div class="domino3" data-aos="fade-right">
+      <img alt="Wuppertal" src='{% static "denkmalgeschutztelofts/images/wuppertal1.jpg" %}' class="img-fluid info-img2 responsenone">
+    </div>
+  </div>
+
+</div>
+
+    <div class="dsnone" style="width: 100%;"><iframe width="100%" height="450px" frameborder="0" scrolling="no"  q=51.2700665,7.2267755
+    marginheight="0" marginwidth="0"
+    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=de&amp;q=51.2700665,7.2267755&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+</div>
+
+
+<div class="carousel-inner dsnone" style="margin-top: -10px;">
+  <div class="row project-row" style="height: 400px;">
+    <div class="domino1" style="height: 400px;">
+      <img src="{% static "denkmalgeschutztelofts/images/wup21.jpg" %}" class="img-fluid project-image3" alt="Wuppertal Wächst">
+    </div>
+    <div class="domino2 background-grey">
+      <h2 class="table-tittle" style="text-align: center">Wuppertal wächst
+      </h2>
+      <table class="table" style="margin-top: 30px; text-align: center;">
+        <hr class="hr-line8" data-aos="fade-up" />
+        <thead>
+
+        </thead>
+        <tbody>
+          <tr data-aos="fade-up" data-aos-delay="100">
+            <th scope="col">WUPPERTAL</th>
+            <th scope="col">2015</th>
+            <th scope="col">2016</th>
+            <th scope="col">2017</th>
+            <th scope="col">BIS 2020</th>
+          </tr>
+          <tr data-aos="fade-up" data-aos-delay="250">
+            <th>EINWOHNER</th>
+            <td>350.046</td>
+            <td>355.300</td>
+            <td>360.000</td>
+            <td>363.000</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="container-contact100-form-btn " data-aos="fade-up" data-aos-delay="400">
+{#        <button type="submit" class="contact100-form-btn" style="background-color: #D0E5EA;color: #5C4F45;"#}
+{#          onclick="window.location.href = '/angebot-anfordern/kaiser-und-dicke/';">#}
+{#          Mehr erfahren#}
+{#        </button>#}
+          <button class="contact100-form-btn button-kapital" type="submit" onclick="window.location.href = '/angebot-anfordern/Rübenstraße/';">
+          Mehr erfahren
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="parallax background-oyster height-setting-blue">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h2 class=" domino-title-center color_2" data-aos="fade-up" >Projekteigentümer</h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+ <div class="container ">
+      <div class="row renaissance">
+          <div class="container-g" style="text-align: center;">
+            <img alt="Renaissance AG"  src="{% static 'denkmalgeschutztelofts/images/renaissance-ag.png' %}" class="img-responsive ren-logo"
+             >
+          </div>
+          <div class="container-g" >
+            <p  class="renaissance-text">
+              <strong>Die renaissance Immobilien & Beteiligungen AG restauriert und vermarktet bevorzugt Objekte aus der
+                Zeit
+                um das 19. Jahrhundert.</strong> Bei der Sanierung greift die Gesellschaft auf die Erfahrung von über 1000
+              Wohnungen zurück-vielfach denkmalgeschützt.
+            </p>
+            <p class="renaissance-text">
+              <strong>Der Firmenname renaissance AG ist da bei kein Zufall,</strong> sondern Reminiszenz an die Überzeugung,
+              dass auch im 21. Jahrhundert die Immobilie eine der besten Vermögensanlagen ist und selbst in volatilen Zeiten
+              in der Regel wertstabil bleibt.
+            </p>
+          </div>
+      </div>
+</div>
+
+
+
+ <div class="parallax background-oyster height-setting-blue" style="margin-top: 0px;">
+  <div class="container h-100">
+      <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+              <h2 class=" domino-title-center color_2" data-aos="fade-up" >Kontakt</h2>
+          </div>
+      </div>
+  </div>
+</div>
+
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <div class="contact100-more flex-col-c-m dnone-responsive"
+                 style="padding: 6em; margin: 90px 0 101px 0;
+                         background-image: url('{% static "denkmalgeschutztelofts/images/project2.jpg" %}')">
+            </div>
+
+            <form method="POST" id="form-kontakt" class="contact100-form validate-form"
+                  style="padding-right: 9%; padding-left: 9%">
+                {% csrf_token %}
+
+
+                <label class="label-input100" for="first-name" style="margin-top: 0;">Nennen Sie uns
+                    Ihren Namen *</label>
+                <div class="wrap-input100 rs3-wrap-input100">
+                    <select class="anrede-outline" name="Anrede">
+                        <option value="0">Anrede</option>
+                        <option value="1">Herr</option>
+                        <option value="2">Frau</option>
+                    </select>
+                    <span class="focus-input100"></span>
+
+                </div>
+                <div class="wrap-input100 rs1-wrap-input100 validate-input"
+                     data-validate="Vorname eingeben">
+                    <input id="id_first_name" class="input100" type="text" name="vorname"
+                           placeholder="Vorname"
+                           required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.first_name.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <div class="wrap-input100 rs2-wrap-input100 validate-input"
+                     data-validate="Nachname eingeben">
+                    <input id="id_last_name" class="input100" type="text" name="nachname"
+                           placeholder="Nachname"
+                           required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.last_name.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <label class="label-input100" for="phone">Telefonnummer eingeben *</label>
+                <div class="wrap-input100 validate-input"
+                     data-validate="Gültige Telefonnummer ist erforderlich">
+                    <input id="id_phone_number3" class="input100" type="tel" name="telefon" required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="email">Geben Sie Ihre E-Mail ein *</label>
+                <div class="wrap-input100">
+                    <input id="id_email" class="input100" type="text" name="email"
+                           placeholder="maxmustermann@mail.de"
+                           required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.email.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <label class="label-input100" for="message">Nachricht *</label>
+                <div class="wrap-input100 validate-input" data-validate="Nachricht ist erforderlich"
+                     style="min-height: 80px;">
+                    <textarea id="id_message" class="input100" name="nachricht"
+                              style="font-size: 18px !important; padding: 10px 25px !important; margin-bottom: 0 !important; border: unset !important; min-height: 80px !important; color: #666666 !important;"
+                              required>Bitte nehmen Sie Kontakt mit mir auf.</textarea>
+                    <span class="focus-input100"></span>
+                    {% for err in form.message.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+                <ul style="padding: 0;">
+                    <li>
+                        <input style="float: left;" id="c1" type="checkbox" required>
+                        <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                        font-size: 14px; padding-left: 20px; font-weight: 500;">
+                            Hiermit willige ich in die dafür erforderliche Erhebung, Speicherung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein. Die Daten werden nicht an unbeteiligte Dritte weitergegeben und ich habe ein Recht auf Einsicht. Diese Erklärung kann ich jederzeit per E-Mail an <span style="font-weight: 700;">info@denkmalkapitalanlagen.de</span> widerrufen.
+Ich akzeptiere die <span style="font-weight: 700;cursor:pointer" onclick="window.location.href = '/datenschutz';">Datenschutzerklärung</span>.
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <input style="float: left;" id="c1" type="checkbox" required>
+                        <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                        font-size: 14px; padding-left: 20px; font-weight: 500;">
+                            Ich stimme dem Newsletter-Tracking zu, damit die Inhalte anhand meines Nutzerverhaltens für mich optimiert werden können.
+
+                        </div>
+                    </li> -->
+                </ul>
+                <div class="container-contact100-form-btn">
+                    <button type="submit" class="contact100-form-btn button-kapital">
+                        Nachricht Senden
+                    </button>
+                </div>
+                <!-- <div class="container-contact100-form-btn-sm">
+                    <a class="contact100-form-btn-sm" href="{% url "denkmalgeschutztelofts:index" %}">Zurück zur Homepage</a>
+                </div> -->
+            </form>
+        </div>
+    </div>
+
+
+<!-- <div class="container-h" style="border-top: 40px solid #f2f2f2;">
+  <div class="row p-marg">
+    <div class="col-md-6 txt-pad">
+      <img src="{% static 'denkmalgeschutztelofts/images/renaissance-ag.png' %}" class="img-responsive"
+        style="margin: 0 auto 20px; display: block;max-height: 220px;">
+      <p>
+        <strong>Die renaissance Immobilien & Beteiligungen AG restauriert und vermarktet bevorzugt Objekte aus der Zeit
+          um das 19. Jahrhundert.</strong> Bei der Sanierung greift die Gesellschaft auf die Erfahrung von über 1000
+        Wohnungen zurück-vielfach denkmalgeschützt.
+      </p>
+
+      <p>
+        <strong>Der Firmenname renaissance AG ist da bei kein Zufall,</strong> sondern Reminiszenz an die Überzeugung,
+        dass auch im 21. Jahrhundert die Immobilie eine der besten Vermögensanlagen ist und selbst in volatilen Zeiten
+        in der Regel wertstabil bleibt.
+      </p>
+
+
+    </div>
+    <div class="col-md-6 r-pad">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item height-scale active">
+            <img class="d-block w-100" src="/static/denkmalgeschutztelofts/images/slider4.png">
+          </div>
+          <div class="carousel-item height-scale">
+            <img class="d-block w-100 img-scale" src="/static/denkmalgeschutztelofts/images/slider5.png"
+              style="height: 250px;object-fit: contain;">
+          </div>
+        </div>
+        <a style="visibility: hidden;" class="carousel-control-prev" href="#carouselExampleControls" role="button"
+          data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a style="visibility: hidden;" class="carousel-control-next" href="#carouselExampleControls" role="button"
+          data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+
+<div class="phone-call">
+  <a href="tel:080016803398">
+    <img src="https://image.flaticon.com/icons/png/512/131/131133.png" width="26" alt="Jetzt Anrufen"
+      title="Jetzt Anrufen">
+  </a>
+</div>
+
+
+
+
+
+
+
+
+<!-- Success Modal -->
+<div id="success-modal" class="modal hide fade">
+  <div class="modal-dialog modal-confirm modal-sm">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <div class="icon-box">
+          <i class="material-icons">&#xE876;</i>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+      </div>
+      <div class="modal-content__body text-center">
+        <h4>Vielen Dank für Ihr Interesse!</h4>
+        <p style="text-align: center">Wir haben Ihre Reservierung erhalten. Bitte überprüfen
+          Sie Ihre Mailbox für
+          weitere Informationen.</p>
+        <a href="{% url "denkmalgeschutztelofts:index" %}" target="_parent">
+          <button class="btn btn-success">
+            <div class="text-center">
+              <span>Zurück zur </span><span>Startseite</span><span><i class="material-icons">&#xE5C8;</i></span>
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% if successful_submit %}
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#success-modal").modal('show');
+  });
+</script>
+{% endif %}
+ <script src="/static/denkmalgeschutztelofts/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#id_phone_number");
+        window.intlTelInput(input, {
+            hiddenInput: "full_id_phone_number",
+            utilsScript: "../../static/denkmalgeschutztelofts/js/utils.js" // just for formatting/placeholders etc
+        });
+    </script>
+    <script>
+        var input = document.querySelector("#id_phone_number3");
+        window.intlTelInput(input, {
+            hiddenInput: "full_id_phone_number",
+            utilsScript: "../../static/denkmalgeschutztelofts/js/utils.js" // just for formatting/placeholders etc
+        });
+    </script>
+<script src="{% static "denkmalgeschutztelofts/vendor/daterangepicker/moment.min.js" %}"></script>
+<script src="{% static "denkmalgeschutztelofts/vendor/daterangepicker/daterangepicker.js" %}"></script>
+<script src="{% static "denkmalgeschutztelofts/vendor/countdowntime/countdowntime.js" %}"></script>
+<script src="{% static "denkmalgeschutztelofts/vendor/jquery/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "denkmalgeschutztelofts/vendor/animsition/js/animsition.min.js" %}"></script>
+<script src="{% static "denkmalgeschutztelofts/vendor/bootstrap/js/popper.js" %}"></script>
+<script src="{% static "denkmalgeschutztelofts/vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+<script src="{% static "denkmalgeschutztelofts/vendor/select2/select2.min.js" %}"></script>
+
+
+{% endblock %}

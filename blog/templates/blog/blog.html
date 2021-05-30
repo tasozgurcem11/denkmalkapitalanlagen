@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% extends "denkmalgeschutztelofts/base.html" %}
+{% load static %}
+
+
+{% block title %}Blog{% endblock %}
+
+{% block priority_css %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "blog/fonts/icomoon/style.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/jquery-ui.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "blog/fonts/flaticon/font/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "blog/css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "blog/css/style.css" %}">
+{% endblock %}
+
+{% block body %}
+<div class="bckgrnd-black sticky-nav-margin" style="text-align:left;background-image:url('{% static "denkmalgeschutztelofts/images/project1.jpg" %}');background-size: cover;background-repeat: no-repeat;">
+    <div class="blog-banner" style="background-color: #000; padding: 5px 25px 10px 25px;">Neueste Beiträge
+    </div>
+</div>
+    <div class="site-section">
+        
+
+        <div class="container-fluid contenedor text-center">
+            <div class="text-center">
+                {% if posts %}
+                <div class="row">
+                    {% for post in posts %}
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container_foto" onclick="location.href='{% url "blog:post" post.slug %}'">
+                        <div class="ver_mas text-center" style="vertical-align: middle;" >
+                            <p>{{ post.description }}</p>
+{#                            <p>{{ post.date|date:"SHORT_DATE_FORMAT" }}</p>#}
+                        </div>
+                        <article class="text-left">
+                            <h2>{{ post.title }}</h2>
+                        </article>
+                        {% if post.cover_image %}                                       
+                            <img src="{{ post.cover_image.url }}" alt="Image">
+                        {% else %}
+                            <img src="https://img-aws.ehowcdn.com/400x400/ds-img.studiod.com/Half_Dome_from_Glacier_Point0_1.jpg" alt="">
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>     
+                {% endif %}                  
+            </div>
+        </div>
+
+    <div id="carouselExampleIndicatorsx" class="carousel slide dsnone" data-ride="carousel"  data-interval="10000" style="height: 550px">
+    <ol class="carousel-indicators" style="visibility: hidden;">
+      <li data-target="#carouselExampleIndicatorsx" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicatorsx" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicatorsx" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" style="margin: -1px 0 -1px 0;">
+    <div class="carousel-item active">
+        <div class="container-fluid dsnone" style="background-color: #FEF2DA;" >
+            <div class="row project-row-long" style="height: 550px;">
+                <div class="domino2-2" data-aos="zoom-in" style="height: 500px;">
+                         <img alt="Kaiser und Dicke" src="{% static "denkmalgeschutztelofts/images/kaiser3.png" %}" class="img-fluid project-image-long" style="height: 550px">
+                     </div>
+                     <div class="domino1-2 background-grey" >
+                         <h2 class="table-hdr" style="color: #5C4F45;" >Highlights
+                         </h2>
+                         <table class="table borderless" >
+                             <hr class="hr-line2" style="color: #5C4F45;" data-aos="fade-up"/>
+                             <thead>
+                             </thead>
+                             <tbody>
+                               <tr data-aos="fade-up" >
+                                 <th scope="row">Wohneinheiten:</th>
+                                 <td>32</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="100">
+                                 <th scope="row">Flächen:</th>
+                                 <td>45-116 m²</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="200">
+                                 <th scope="row">Denkmal-AfA:</th>
+                                 <td>75%</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="400">
+                                <th scope="row">KfW Tilgungszuschuss:</th>
+                                <td>25%</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="500">
+                                <th scope="row">KfW-Effizienzhaus Förderkredit bis zu:</th>
+                                <td>120.000</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="300">
+                                 <th scope="row">Kaufpreise:</th>
+                                 <td>161.249 - 415.749 €</td>
+                               </tr>
+                             </tbody>
+                         </table>
+                           <div class="container-contact100-form-btn-long project-button" data-aos="fade-up" data-aos-delay="400">
+                               <button class="contact100-form-btn" type="submit" onclick="window.location.href = '/angebot-anfordern/kaiser-und-dicke/';">
+                                  Jetzt Anfragen
+                                </button>
+                               <button class="contact100-form-btn" style="margin-left: 4em" type="submit" onclick="window.location.href = '/kaiser-dicke/';">
+                                  Mehr erfahren
+                                </button>
+                     </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="carousel-item">
+          <div class="container-fluid dsnone" style="background-color: #FEF2DA;" >
+            <div class="row project-row-long" style="height: 550px;">
+                <div class="domino2-2" data-aos="zoom-in" style="height: 500px;">
+                         <img alt="Rübenstraße" src="{% static "denkmalgeschutztelofts/images/RB/rb1.jpg" %}" class="img-fluid project-image-long" style="height: 550px">
+                     </div>
+                     <div class="domino1-2 background-grey" >
+                         <h2 class="table-hdr" style="color: #5C4F45;" >Highlights
+                         </h2>
+                         <table class="table borderless" >
+                             <hr class="hr-line2" style="color: #5C4F45;" data-aos="fade-up"/>
+                             <thead>
+                             </thead>
+                             <tbody>
+                               <tr data-aos="fade-up" >
+                                 <th scope="row">Wohneinheiten:</th>
+                                 <td>8</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="100">
+                                 <th scope="row">Flächen:</th>
+                                 <td>29,61-108,64 m²</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="200">
+                                 <th scope="row">Denkmal-AfA:</th>
+                                 <td>60%</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="400">
+                                <th scope="row">KfW Tilgungszuschuss:</th>
+                                <td>25%</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="500">
+                                <th scope="row">KfW-Effizienzhaus Förderkredit bis zu:</th>
+                                <td>120.000</td>
+                               </tr>
+                               <tr data-aos="fade-up" data-aos-delay="300">
+                                 <th scope="row">Preis pro m²:</th>
+                                 <td>3.580 €</td>
+                               </tr>
+                             <tr>
+
+                             </tbody>
+                         </table>
+                           <div class="container-contact100-form-btn-long project-button" data-aos="fade-up" data-aos-delay="400">
+{#                             <button type="submit" class="contact100-form-btn" style="background-color: #D0E5EA;color: #5C4F45" onclick="window.location.href = '/angebot-anfordern/Rübenstraße/';">#}
+{#                                 Jetzt Anfragen#}
+{#                             </button>#}
+{#                             <button type="submit" style="margin-left: 30px;background-color: #fff;color: #000;" class="contact100-form-btn btn-none" onclick="window.location.href = '/Rübenstraße/';">#}
+{#                                Mehr erfahren#}
+{#                            </button>#}
+                               <button class="contact100-form-btn" type="submit" onclick="window.location.href = '/angebot-anfordern/Rübenstraße/';">
+                                  Jetzt Anfragen
+                                </button>
+                               <button class="contact100-form-btn" style="margin-left: 4em" type="submit" onclick="window.location.href = '/Rübenstraße/';">
+                                  Mehr erfahren
+                                </button>
+                     </div>
+               </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" style="mix-blend-mode: difference; left: -8px;" href="#carouselExampleIndicatorsx" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next"style="mix-blend-mode: difference; right: -8px;" href="#carouselExampleIndicatorsx" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+    
+        <!-- <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h1>Neueste Beiträge
+                    </h1>
+                </div>
+            </div>
+            {% if posts %}
+                <div class="row">
+                    {% for post in posts %}
+                        <div class="col-lg-4 mb-4">
+                            <div class="entry2">
+                                <a href="{% url "blog:post" post.slug %}">
+                                    {% if post.cover_image %}
+                                        <img src="{{ post.cover_image.url }}" alt="Image"
+                                             class="img-fluid" style="height: 300px;width: 450px;object-fit:cover;">
+                                    {% else %}
+                                        <img src="{% static "blog/images/img_1.jpg" %}" alt="Image"
+                                             class="img-fluid" style="height: 200px; max-width: 200px;">
+                                    {% endif %}
+                                </a>
+                                <div class="excerpt" style="background-color: #fff;margin-top: -30px;">
+                                    <h2 style="color: #c9a877;">
+                                        <a href="{% url "blog:post" post.slug %}" style="color: #c9a877;">{{ post.title }}</a>
+                                    </h2>
+                                    <div class="post-meta align-items-center text-left clearfix">
+                                        <span class="d-inline-block mt-1">By <a
+                                                href="#">{{ post.first_name }} {{ post.last_name }}</a></span>
+                                        <span>&nbsp;-&nbsp;{{ post.date|date:"SHORT_DATE_FORMAT" }}</span>
+                                    </div>
+
+                                    <p>{{ post.content|safe|truncatechars_html:128 }}</p>
+                                    <p><a href="{% url "blog:post" post.slug %}">Read
+                                        More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div> -->
+
+        
+{% endblock %}
+
+{% block priority_js %}
+    <script src="{% static "blog/js/jquery-3.3.1.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery-migrate-3.0.1.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery-ui.js" %}"></script>
+    <script src="{% static "blog/js/popper.min.js" %}"></script>
+    <script src="{% static "blog/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "blog/js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery.stellar.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery.countdown.min.js" %}"></script>
+    <script src="{% static "blog/js/jquery.magnific-popup.min.js" %}"></script>
+    <script src="{% static "blog/js/bootstrap-datepicker.min.js" %}"></script>
+    <script src="{% static "blog/js/aos.js" %}"></script>
+
+    <script src="{% static "blog/js/main.js" %}"></script>
+{% endblock %}

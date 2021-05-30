@@ -1,0 +1,65 @@
+body {
+  background: #eaecfa;
+}
+
+.loader {
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: HelveticaNeue-Light, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #D0E5EA;
+  letter-spacing: 0.2em;
+  z-index: 1;
+}
+.loader::before, .loader::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #D0E5EA;
+  position: absolute;
+  animation: load 0.7s infinite alternate ease-in-out;
+}
+.loader::before {
+  top: 0;
+}
+.loader::after {
+  bottom: 0;
+}
+
+.loader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=loader.css.map */

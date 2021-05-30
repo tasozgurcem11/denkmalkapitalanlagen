@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+{% extends "denkmalgeschutztelofts/base.html" %}
+{% load static %}
+
+{% block title %}Denkmal Kapitalanlagen{% endblock %}
+
+
+{% block body %}
+
+
+    <div class="bckgrnd-creme sticky-nav-margin sticky-nav-margin-tablet">
+
+        <div class="bnner-txt-gold">Kontakt
+        </div>
+    </div>
+    <br>
+    <div class="phone-call">
+        <a href="tel:080016803398">
+            <img src="https://image.flaticon.com/icons/png/512/131/131133.png" width="26"
+                 alt="Jetzt Anrufen" title="Jetzt Anrufen">
+        </a>
+    </div>
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hide fade">
+        <div class="modal-dialog modal-confirm modal-sm">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-content__body text-center">
+                    <h4>Großartig!</h4>
+                    <p style="text-align: center">Wir haben Ihre Reservierung erhalten. Bitte
+                        überprüfen
+                        Sie Ihre Mailbox für
+                        weitere Informationen.</p>
+                    <a href="{% url "denkmalgeschutztelofts:index" %}" target="_parent">
+                        <button class="btn btn-success">
+                            <div class="text-center">
+                                <span>Zurück zur </span><span>Startseite</span><span><i
+                                    class="material-icons">&#xE5C8;</i></span>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container-fluid ">
+        <div class="row" style="background-color: #c9a877;height: 400px;margin-top: -30px;">
+            <div class="domino2" data-aos="zoom-in-down">
+                <h2 class="domino-content-left domino-title color_gold">Kont
+    
+    
+                </h2>
+                <p class="domino-content-left domino-p  align-middle white">Neben den damals relativ
+                    günstigen Mieten ab den
+                    1940er Jahren, waren es auch diese Raum- und Lichtverhältnisse deren
+                    Anziehungskraft sich Künstler New
+                    Yorks nicht entziehen konnten. Sie zogen in diese Lager- und Produktionsstätten
+                    ein und nutzten all den
+                    Raum sowohl zum Leben als auch zum Schaffen. Steigende Grundstückspreise führten
+                    u.a. dazu, dass
+                    Industrie beispielsweise aus New York City wegzog und sich in den Vororten
+                    niederließ. Der Beginn einer
+                    neuen Definition des Wohnens im Spannungsfeld zwischen Historie und Moderne.
+    
+    
+                </p>
+            
+            </div>
+            <div class="domino1" data-aos="zoom-in" >
+                <img src="{% static "denkmalgeschutztelofts/images/kaiser_ceiling.jpg" %}" class="img-fluid blog-image">
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <div class="contact100-more flex-col-c-m dnone-responsive"
+                 style="padding: 6em; margin: 90px 0 101px 0;
+                         background-image: url('{% static "denkmalgeschutztelofts/images/project2.jpg" %}')">
+            </div>
+
+            <form method="POST" id="form-kontakt" class="contact100-form validate-form"
+                  style="padding-right: 9%; padding-left: 9%">
+                {% csrf_token %}
+
+
+                <label class="label-input100" for="first-name" style="margin-top: 0;">Nennen Sie uns
+                    Ihren Namen *</label>
+                <div class="wrap-input100 rs3-wrap-input100">
+                    <select class="anrede-outline" name="Anrede">
+                        <option value="0">Anrede</option>
+                        <option value="1">Herr</option>
+                        <option value="2">Frau</option>
+                    </select>
+                    <span class="focus-input100"></span>
+
+                </div>
+                <div class="wrap-input100 rs1-wrap-input100 validate-input"
+                     data-validate="Vorname eingeben">
+                    <input id="id_first_name" class="input100" type="text" name="vorname"
+                           placeholder="Vorname"
+                           required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.first_name.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <div class="wrap-input100 rs2-wrap-input100 validate-input"
+                     data-validate="Nachname eingeben">
+                    <input id="id_last_name" class="input100" type="text" name="nachname"
+                           placeholder="Nachname"
+                           required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.last_name.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <label class="label-input100" for="phone">Telefonnummer eingeben *</label>
+                <div class="wrap-input100 validate-input"
+                     data-validate="Gültige Telefonnummer ist erforderlich">
+                    <input id="id_phone_number" class="input100" type="tel" name="telefon" required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label class="label-input100" for="email">Geben Sie Ihre E-Mail ein *</label>
+                <div class="wrap-input100">
+                    <input id="id_email" class="input100" type="text" name="email"
+                           placeholder="maxmustermann@mail.de"
+                           required>
+                    <span class="focus-input100"></span>
+                    {% for err in form.email.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+
+                <label class="label-input100" for="message">Nachricht *</label>
+                <div class="wrap-input100 validate-input" data-validate="Nachricht ist erforderlich"
+                     style="min-height: 80px;">
+                    <textarea id="id_message" class="input100" name="nachricht"
+                              style="font-size: 18px !important; padding: 10px 25px !important; margin-bottom: 0 !important; border: unset !important; min-height: 80px !important; color: #666666 !important;"
+                              required>Bitte nehmen Sie Kontakt mit mir auf.</textarea>
+                    <span class="focus-input100"></span>
+                    {% for err in form.message.errors %}
+                        <small class="text-danger">{{ err }}</small><br>
+                    {% endfor %}
+                </div>
+                <ul style="padding: 0;">
+                    <li>
+                        <input style="float: left;" id="c1" type="checkbox" required>
+                        <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                        font-size: 14px; padding-left: 20px; font-weight: 500;">
+                            Hiermit willige ich in die dafür erforderliche Erhebung, Speicherung, Verarbeitung und Nutzung meiner personenbezogenen Daten ein. Die Daten werden nicht an unbeteiligte Dritte weitergegeben und ich habe ein Recht auf Einsicht. Diese Erklärung kann ich jederzeit per E-Mail an <span style="font-weight: 700;">info@denkmalkapitalanlagen.de</span> widerrufen.
+Ich akzeptiere die <span style="font-weight: 700;cursor:pointer" onclick="window.location.href = '/datenschutz';">Datenschutzerklärung</span>.
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <input style="float: left;" id="c1" type="checkbox" required>
+                        <div style="margin: 3em 0 3em 50px; font-family: HelveticaNeue-Light, sans-serif;
+                        font-size: 14px; padding-left: 20px; font-weight: 500;">
+                            Ich stimme dem Newsletter-Tracking zu, damit die Inhalte anhand meines Nutzerverhaltens für mich optimiert werden können.
+
+                        </div>
+                    </li> -->
+                </ul>
+                <div class="container-contact100-form-btn">
+                    <button type="submit" class="contact100-form-btn button-kapital">
+                        Nachricht Senden
+                    </button>
+                </div>
+                <!-- <div class="container-contact100-form-btn-sm">
+                    <a class="contact100-form-btn-sm" href="{% url "denkmalgeschutztelofts:index" %}">Zurück zur Homepage</a>
+                </div> -->
+            </form>
+        </div>
+    </div>
+
+
+
+
+    {% if successful_submit %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#success-modal").modal('show');
+            });
+        </script>
+    {% endif %}
+    <script src="/static/denkmalgeschutztelofts/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#id_phone_number");
+        window.intlTelInput(input, {
+            hiddenInput: "full_id_phone_number",
+            utilsScript: "../../static/denkmalgeschutztelofts/js/utils.js" // just for formatting/placeholders etc
+        });
+    </script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/daterangepicker/moment.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/daterangepicker/daterangepicker.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/countdowntime/countdowntime.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/jquery/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/animsition/js/animsition.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/bootstrap/js/popper.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "denkmalgeschutztelofts/vendor/select2/select2.min.js" %}"></script>
+
+
+{% endblock %}

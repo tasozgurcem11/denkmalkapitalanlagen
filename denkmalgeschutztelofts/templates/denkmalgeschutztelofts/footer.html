@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+
+<!-- Footer -->
+<footer class="page-footer font-small" style="background-color: black;">
+    <div class="site-footer d-none d-lg-block mb-4" style="background-color: #D0E5EA; max-height: 80px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h2 class="footer-heading footer-style " style="
+                            color: #5C4F45;
+                            font-size: 28px;
+                            
+                            text-align: left;padding-top: 22px;
+                        ">
+                        Newsletter abonnieren
+                    </h2>
+                </div>
+                <div class="col-md-6 mb-4" style="padding-top: 14px;padding-left: 50px;text-align: right;">
+                    <div class="container__item">
+                        <form action="{% url "denkmalgeschutztelofts:newsletter_abonnieren" %}" class="form2" method="POST">{% csrf_token %}
+                            <input type="email" class="form2__field footer-style" placeholder="Ihre E-Mail-Adresse" name="email">
+                            <input type="hidden" name="origin_path" value="{{ request.get_full_path }}">
+                            <button type="submit" class="footer-style btn2 btn2--primary btn2--inside uppercase" style="color: #fff;background-color: #5C4F45">Senden</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Elements -->
+
+{#    desktop footer#}
+    <div class="container dsnone-tablets dsnone-phones">
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+                <h2 class="footer-logo footer-style">                denkmalkapitalanlagen.de
+                </h2>
+
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 footer-group">
+
+                <!-- <form class="input-group">
+                    <input type="text" class="form-control form-control-sm" placeholder="Your email"
+                        aria-label="Your email" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-outline-white my-0" type="button">Sign up</button>
+                    </div>
+                </form> -->
+                <a class="footer-items footer-style" style="color: #fff;" href="/impressum">Impressum </a> <span class="footer-items footer-style">&nbsp;&nbsp;|&nbsp;&nbsp;</span>  <a  href="/datenschutz" class="footer-items footer-style"  style="color: #fff;"> Datenschutz</a>
+
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+    </div>
+
+
+{#    mobile footer#}
+    <div class="row footer-row dsnone-desktop dsnone-tablets">
+        <div class="container footer-mobile">
+            <p><span onclick="window.location.href = '/datenschutz';">Datenschutz</span><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span onclick="window.location.href = '/impressum';">Impressum</span></p>
+        </div>
+    </div>
+
+
+{#    tablets footer#}
+    <div class="row footer-row dsnone-phones dsnone-desktop">
+        <div class="container footer-tablets">
+            <p style="float: left" onclick="window.location.href = '/';">denkmalkapitalanlagen.de</p>
+            <p style="float: right"><span onclick="window.location.href = '/datenschutz';">Datenschutz</span><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span onclick="window.location.href = '/impressum';">Impressum</span></p>
+        </div>
+    </div>
+</footer>
